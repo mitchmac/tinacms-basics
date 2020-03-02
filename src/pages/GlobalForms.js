@@ -1,6 +1,7 @@
 import React from "react";
 import {useCMS, useLocalForm, useGlobalForm } from 'tinacms';
 import Code from '../components/Code.js';
+import NextLink from "../components/NextLink";
 
 export default function GlobalForms() {
     const cms = useCMS();
@@ -86,6 +87,7 @@ const [_, globalForm] = useGlobalForm({
     return (
         <>
             <p>{page.text}</p>
+            <NextLink to="/data">What about dynamic content?</NextLink>
             <Code readMoreLink="https://tinacms.org/docs/forms#useglobalform" readMoreText="Read the docs">
                 {code}
             </Code>
