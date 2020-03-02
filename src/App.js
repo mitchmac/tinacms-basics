@@ -28,6 +28,7 @@ function App() {
       <Router>
               <Container style={{
                   marginTop: 40,
+                  marginBottom: 40,
                   paddingLeft: 40,
                   paddingRight: 40,
                   maxWidth: 1000
