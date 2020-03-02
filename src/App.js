@@ -19,6 +19,7 @@ import FormFields from './pages/FormFields.js';
 import Blocks from './pages/Blocks.js';
 import Inline from './pages/Inline.js';
 import GlobalForms from './pages/GlobalForms.js';
+import Data from './pages/Data.js';
 
 import NavItem from "./components/Nav.js";
 import { Container, Columns, Column } from 'bloomer';
@@ -43,6 +44,7 @@ function App() {
                           <Route path="/blocks" component={Blocks} />
                           <Route path="/inline" component={Inline} />
                           <Route path="/global-forms" component={GlobalForms} />
+                          <Route path="/data" component={Data} />
                           <Route exact path="/" component={Home} />
                       </Switch>
                   </Column>
@@ -55,6 +57,7 @@ function App() {
                           <NavItem to="/blocks"><li>Blocks</li></NavItem>
                           <NavItem to="/inline"><li>Inline Editing</li></NavItem>
                           <NavItem to="/global-forms"><li>Global Forms</li></NavItem>
+                          <NavItem to="/data"><li>Working with Data</li></NavItem>
                       </ol>
                   </Column>
               </Columns>

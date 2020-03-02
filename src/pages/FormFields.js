@@ -43,6 +43,10 @@ export default function FormFields() {
                 colors: ['#EC4815', '#241748', '#B4F4E0', '#E6FAF8'],
                 widget: 'sketch',
             },
+            {
+                name: '_custom',
+                component: () => <p>This is a custom component</p>
+             }
         ],
 
         onSubmit(data, form) {
@@ -88,6 +92,10 @@ const [page, form] = useLocalForm({
             colors: ['#EC4815', '#241748', '#B4F4E0', '#E6FAF8'],
             widget: 'sketch',
          },
+         {
+            name: '_custom',
+            component: () => <p>This is a custom component</p>
+         }
     ],
 
     onSubmit(data, form) {
