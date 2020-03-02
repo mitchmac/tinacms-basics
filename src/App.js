@@ -32,9 +32,9 @@ function App() {
                   paddingRight: 40,
                   maxWidth: 1000
               }}>
-                  <h1 className="title is-1"><Link to="/" className="has-text-black">TinaCMS Concepts</Link></h1>
               <Columns>
                   <Column isSize='3/4'>
+                      <h1 className="title is-1"><Link to="/" className="has-text-black">TinaCMS Concepts</Link></h1>
                       <Switch>
                           <Route path="/adding-tina" component={AddingTina} />
                           <Route path="/forms" component={Forms} />
@@ -47,7 +47,7 @@ function App() {
                   </Column>
 
                   <Column isSize='1/4'>
-                      <ol>
+                      <ol style={{marginTop: 20}}>
                           <NavItem to="/adding-tina"><li>Adding Tina</li></NavItem>
                           <NavItem to="/forms"><li>Forms</li></NavItem>
                           <NavItem to="/form-fields"><li>Form Fields</li></NavItem>

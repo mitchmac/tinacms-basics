@@ -25,9 +25,10 @@ export default function Code(props) {
                         {props.children}
                     </SyntaxHighlighter>
                 </div>
+
             }
-            {props.readmore &&
-            <a href={props.readmore.link}>{props.readmore.text}</a>
+            {show && props.readMoreLink &&
+            <a href={props.readMoreLink} target="_blank" rel="noopener noreferrer">{props.readMoreText}</a>
             }
         </div>
     );
