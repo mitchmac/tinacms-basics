@@ -16,7 +16,7 @@ export default function GlobalForms() {
 
         fields: [
             {
-                name: 'text',
+                name: 'siteTitle',
                 label: 'Site Title',
                 component: 'text'
             }
@@ -57,65 +57,31 @@ export default function GlobalForms() {
     });
 
     let code = `const cms = useCMS();
-    cms.sidebar.hidden = false;
 
-    const [_, globalForm] = useGlobalForm({
-        id: 'site',
-        label: 'Edit Site Settings',
+// This is the global form!    
+const [_, globalForm] = useGlobalForm({
+    id: 'site',
+    label: 'Edit Site Settings',
 
-        initialValues: {
-            siteTitle: 'Hello Tina'
-        },
+    initialValues: {
+        siteTitle: 'Hello Tina'
+    },
 
-        fields: [
-            {
-                name: 'text',
-                label: 'Site Title',
-                component: 'text'
-            }
-        ],
-
-        onSubmit(data, form) {
-            alert('Form submitted! Check the console to see the form values.');
-            console.log(data);
+    fields: [
+        {
+            name: 'siteTitle',
+            label: 'Site Title',
+            component: 'text'
         }
-    });
+    ],
 
-    let content = {
-        text: "There's a menu in the sidebar now, we can access global forms there."
-    };
+    onSubmit(data, form) {
+        alert('Form submitted! Check the console to see the form values.');
+        console.log(data);
+    }
+});
 
-    const [page, form] = useLocalForm({
-        id: 'edit',
-        label: 'Edit',
-
-        initialValues: {
-            ...content
-        },
-
-        fields: [
-            {
-                name: 'text',
-                label: 'Text',
-                component: 'textarea'
-            }
-        ],
-
-        onSubmit(data, form) {
-            alert('Form submitted! Check the console to see the form values.');
-            console.log(data);
-        }
-    });
-
-    return (
-        <>
-            <p>{page.text}</p>
-            <Code>
-                {code}
-            </Code>
-        </>
-    );
-    `;
+// The rest of the page specific code & form structure remains the same as our previous examples`;
 
     return (
         <>
