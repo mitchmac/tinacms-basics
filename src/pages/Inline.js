@@ -40,53 +40,53 @@ export default function Inline() {
     });
 
     let code = `const [, form] = useLocalForm({
-        id: 'edit',
-        label: 'Edit',
+    id: 'edit',
+    label: 'Edit',
 
-        initialValues: {
-            title: 'This is the page title',
-            body: 'Hello!'
+    initialValues: {
+        title: 'This is the page title',
+        body: 'Hello!'
+    },
+
+    fields: [
+        {
+            name: 'title',
+            label: 'Title',
+            component: 'text'
         },
+        {
+            name: 'body',
+            label: 'Text',
+            component: 'markdown'
+        },
+    ],
 
-        fields: [
-            {
-                name: 'title',
-                label: 'Title',
-                component: 'text'
-            },
-            {
-                name: 'body',
-                label: 'Text',
-                component: 'markdown'
-            },
-        ],
+    onSubmit(data, form) {
+        alert('Form submitted! Check the console to see the form values.');
+        console.log(data);
+    }
+});
 
-        onSubmit(data, form) {
-            alert('Form submitted! Check the console to see the form values.');
-            console.log(data);
-        }
-    });
-
-    return (
-        <>
-            <InlineForm form={form}>
-                    <InlineField name="title">
-                        {
-                            ({input, status}) => {
-                                if (status === 'active') {
-                                    return (
-                                        <Field>
-                                            <Label>Name</Label>
-                                            <Control>
-                                                <Input type="text" {...input} />
-                                            </Control>
-                                        </Field>
-                                    )
-                                }
-                                return <h2 className="title is-2">{input.value}</h2>
-                            }
+return (
+    <>
+        <InlineForm form={form}>
+            <InlineField name="title">
+                {
+                    ({input, status}) => {
+                        if (status === 'active') {
+                            return (
+                                <Field>
+                                    <Label>Title</Label>
+                                        <Control>
+                                            <Input type="text" {...input} />
+                                         </Control>
+                                </Field>
+                            )
                         }
-                    </InlineField>
+                        return <h2 className="title is-2">{input.value}</h2>
+                    }
+                }
+            </InlineField>
                     <InlineField name="body">
                         {
                             ({input, status}) => {
@@ -116,7 +116,7 @@ export default function Inline() {
                                 if (status === 'active') {
                                     return (
                                         <Field>
-                                            <Label>Name</Label>
+                                            <Label>Title</Label>
                                             <Control>
                                                 <Input type="text" {...input} />
                                             </Control>
