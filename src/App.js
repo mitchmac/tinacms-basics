@@ -32,7 +32,7 @@ function App() {
                   paddingRight: 40,
                   maxWidth: 1000
               }}>
-                  <h1 className="title is-1"><Link to="/" className="has-text-black">TinaCMS Basics</Link></h1>
+                  <h1 className="title is-1"><Link to="/" className="has-text-black">TinaCMS Concepts</Link></h1>
               <Columns>
                   <Column isSize='3/4'>
                       <Switch>

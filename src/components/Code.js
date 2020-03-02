@@ -3,26 +3,31 @@ import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
 import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism';
 
+import {Button} from 'bloomer';
+
 SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 export default function Code(props) {
     const [show, setVisibility] = useState(false);
     return (
-        <div>
+        <div style={{marginRight: 60, marginTop: 40}}>
             <div style={{width: '100%', textAlign: 'right' }}>
-                <button
+                <Button
+                    isSize="small"
                     onClick={() => setVisibility(!show)}
-                    style={{ padding: 10}}
                 >
-                    Toggle Code
-                </button>
+                    {show ? 'Hide Code' : 'Show Code' }
+                </Button>
             </div>
             {show &&
-                <div style={{width: '100%' }}>
+                <div style={{width: '100%', fontSize: 14 }}>
                     <SyntaxHighlighter language="javascript" style={prism}>
-                        {props.code}
+                        {props.children}
                     </SyntaxHighlighter>
                 </div>
+            }
+            {props.readmore &&
+            <a href={props.readmore.link}>{props.readmore.text}</a>
             }
         </div>
     );
