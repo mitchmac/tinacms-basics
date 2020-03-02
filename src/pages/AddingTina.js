@@ -24,7 +24,7 @@ return (
             <p>Tina is an open-source content editing toolkit. And we've added it to this page.</p>
             <NextLink to="/forms">Cool, let's add a form!</NextLink>
 
-            <Code readMoreLink="https://tinacms.org/docs/cms" readMoreText="Read The Docs">
+            <Code readMoreLink="https://tinacms.org/docs/cms" readMoreText="Read the docs">
                 {code}
             </Code>
         </>

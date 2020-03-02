@@ -112,7 +112,7 @@ return (
                 <div><ReactMarkdown source={page.text}/></div>
             </div>
             <NextLink to="/blocks">What about structured content?</NextLink>
-            <Code>
+            <Code readMoreLink="https://tinacms.org/docs/fields" readMoreText="Read the docs">
                 {code}
             </Code>
         </>

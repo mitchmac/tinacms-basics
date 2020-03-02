@@ -72,7 +72,7 @@ return (
         <>
             <p>{page.text}</p>
             <NextLink to="/form-fields">Boring! Let's make the form better</NextLink>
-            <Code>
+            <Code readMoreLink="https://tinacms.org/docs/forms" readMoreText="Read the docs">
                 {code}
             </Code>
         </>

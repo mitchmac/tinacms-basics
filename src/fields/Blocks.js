@@ -19,11 +19,29 @@ export const CTAFormBlock = {
     label: 'Call To Action',
     key: 'cta-block',
     defaultItem: {
-        headline: '', buttonText: ''
+        headline: '', buttonText: '', buttonColor: '#dbceff', backgroundColor: '#f2fff1'
     },
     fields: [
         { name: 'headline', label: 'Headline', component: 'text' },
-        { name: 'buttonText', label: 'Button Text', component: 'text' }
+        { name: 'buttonText', label: 'Button Text', component: 'text' },
+        {
+            name: 'buttonColor',
+            component: 'color',
+            label: 'Button Color',
+            description: 'Edit the button color here',
+            colorFormat: 'hex',
+            colors: ['#EC4815', '#241748', '#B4F4E0', '#E6FAF8'],
+            widget: 'sketch',
+        },
+        {
+            name: 'backgroundColor',
+            component: 'color',
+            label: 'Background Color',
+            description: 'Edit the background color here',
+            colorFormat: 'hex',
+            colors: ['#EC4815', '#241748', '#B4F4E0', '#E6FAF8'],
+            widget: 'sketch',
+        }
     ],
     itemProps: item => ({
         label: item.headline,

@@ -13,7 +13,7 @@ export default function Blocks() {
 
     let content = {
         blocks: [
-            {headline: 'New Product Launch', buttonText: 'Subscribe now', '_template': 'CTAFormBlock' },
+            {headline: 'New Product Launch', buttonText: 'Subscribe now', buttonColor: '#dbceff', backgroundColor: '#f2fff1', '_template': 'CTAFormBlock' },
             {city: 'Toronto', lat: 43.70011, lon: -79.4163, zoom: 12,  '_template': 'LocationFormBlock'}
         ],
     };
@@ -114,7 +114,7 @@ return (
             })}
 
             <NextLink to="/inline">Can we edit inline?</NextLink>
-            <Code>
+            <Code readMoreLink="https://tinacms.org/docs/fields/blocks" readMoreText="Read the docs">
                 {code}
             </Code>
         </>

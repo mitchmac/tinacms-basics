@@ -86,7 +86,7 @@ const [_, globalForm] = useGlobalForm({
     return (
         <>
             <p>{page.text}</p>
-            <Code>
+            <Code readMoreLink="https://tinacms.org/docs/forms#useglobalform" readMoreText="Read the docs">
                 {code}
             </Code>
         </>
