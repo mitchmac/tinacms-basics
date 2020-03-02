@@ -21,7 +21,7 @@ export default function Code(props) {
             </div>
             {show &&
                 <div style={{width: '100%', fontSize: 14 }}>
-                    <SyntaxHighlighter language="javascript" style={prism}>
+                    <SyntaxHighlighter language="jsx" style={prism}>
                         {props.children}
                     </SyntaxHighlighter>
                 </div>
