@@ -51,6 +51,7 @@ function App() {
 
                   <Column isSize='1/4'>
                       <ol style={{marginTop: 20}}>
+                          <NavItem to="/"><li>Welcome</li></NavItem>
                           <NavItem to="/adding-tina"><li>Adding Tina</li></NavItem>
                           <NavItem to="/forms"><li>Forms</li></NavItem>
                           <NavItem to="/form-fields"><li>Form Fields</li></NavItem>

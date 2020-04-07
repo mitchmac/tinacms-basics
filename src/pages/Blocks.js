@@ -113,7 +113,6 @@ return (
                 }
             })}
 
-            <NextLink to="/inline">Can we edit inline?</NextLink>
             <Code readMoreLink="https://tinacms.org/docs/fields/blocks" readMoreText="Read the docs">
                 {code}
             </Code>

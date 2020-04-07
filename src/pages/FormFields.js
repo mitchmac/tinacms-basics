@@ -119,7 +119,7 @@ return (
                 <h2 className="title is-3">{page.title}</h2>
                 <div><ReactMarkdown source={page.text}/></div>
             </div>
-            <NextLink to="/blocks">What about structured content?</NextLink>
+
             <Code readMoreLink="https://tinacms.org/docs/fields" readMoreText="Read the docs">
                 {code}
             </Code>

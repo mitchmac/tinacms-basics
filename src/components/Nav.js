@@ -5,6 +5,7 @@ export default function NavItem(props) {
     return (
         <>
             <NavLink
+                exact
                 to={props.to}
                 activeStyle={{
                     fontWeight: "bold",

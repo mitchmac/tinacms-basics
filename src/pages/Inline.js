@@ -143,7 +143,6 @@ return (
                 </div>
             </InlineForm>
 
-            <NextLink to="/global-forms">Are we stuck with single page forms?</NextLink>
             <Code readMoreLink="https://tinacms.org/docs/inline-editing" readMoreText="Read the docs">
                 {code}
             </Code>
